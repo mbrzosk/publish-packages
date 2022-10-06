@@ -16,10 +16,7 @@ jobs:
           username: mbrzosk
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          repository: mbrzosk/publish-packages/game
       - name: Build container
         uses: docker/build-push-action@v2
         with:
-          repository: mbrzosk/publish-packages/game
-          tag_with_sha: true
-          
+          push: true
